@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghafarian</title>
+    <style>
+        html{
+            overflow-x: hidden;
+        }
+        /*Header Style*/
+       
+        .img-last{
+            background-image: url(./image/1.jpg);
+            background-repeat: no-repeat;
+            width:125%;
+            height: 125%;
+            /* overflow: hidden; */
+            background-size: 100%;
+            transform: rotate(-45deg);
+            padding: 0;
+        }
+
+        .img-2{
+            margin: -14rem -25rem;
+            position: absolute;
+            width: 1080px;
+            height: 720px;
+            background: transparent;
+            transform: rotate(38deg);
+        }
+
+        .img-3{
+            height: 100%;
+            width: 100%;
+            border-radius: 150px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+
+        .img{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: right;
+            text-align: right;
+            z-index: -1;
+            position: absolute;
+            right: 10rem;
+        }
+        .logo{
+            margin-left: 100px;
+            left: 0;
+        }
+        .navi a{
+            padding-top: 20px;
+            z-index: 0;
+            float: right;
+            color: rgb(0, 0, 0);
+
+            padding: 12px;
+            text-decoration:solid;
+            font-size: 18px; 
+            line-height: 25px;
+            border-radius: 20px;
+  
+        }
+        .navi a.Active{
+            text-decoration:underline;
+            color: rgb(145, 47, 47);
+        }
+        /*Header End*/
+        /*Main Contents Style*/
+        .container{
+            margin-bottom: 35%;
+            display: flex;
+            flex-direction: row;
+            max-width: 200rem;
+            max-height:60rem;
+            background-color: none;
+        }
+        .zdown{
+            z-index: 2;
+            padding-bottom: 0;
+            padding-left: 15%;
+            padding-top: 40%; ;
+            display: flex;
+            flex-direction: row;
+            width: 100rem;
+            height: 85rem;
+        }
+        .p-1{
+            max-width: 45rem;
+            max-height: 15rem;
+            margin-top: 5rem;
+            margin-left: 10rem;
+        }
+        
+        .zup{
+           
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            z-index: 3;
+            padding-left: 30%;
+            padding-top: 65%;
+            height: 20rem;
+            max-width: 10rem;
+            max-height: 15rem;
+        }
+       
+        .offer{
+            align-items: center;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .offer .title{
+            font-size: 2rem;
+        }
+
+        .offer .text{
+            font-size: 0.8rem;
+            width: 75ch;
+        }
+
+        .card__container{
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: 4rem;
+        }
+
+        .card{
+            /* border: 1px solid #000; */
+            border-radius: 12px;
+            padding: 2rem 0.7rem 2rem 0.7rem;
+            box-shadow: -0.2rem 0.2rem 1rem #bababa;
+            line-height: 0.7rem;
+            width: 15ch;
+        }
+
+        .card i{
+            color: #b12f79;
+            line-height: 0.5rem;
+        }
+
+        .offer__card__title{
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 0.7rem;
+            line-height: 1.6rem;
+        }
+
+        .offer__card__text{
+            font-weight: 400;
+            font-size: 0.7rem;
+            /* line-height: 0.5rem; */
+        }
+        .comments{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        /* .comment-top{
+            display: flex;
+            gap: ;
+        } */
+        .name{
+            /* background-color: #b12f79; */
+            display:inline;
+            font-weight: 600;
+        }
+
+        .stars{
+            display:inline;
+            /* background-color: #b12f79; */
+            float: right;
+        }
+
+        .comment-container{
+            display: flex;
+            gap: 5rem;
+        }
+
+        .comment-card{
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0.1rem 0.2rem 1rem #dadada;
+        }
+
+        .profile-pic{
+            border-radius: 50px;
+            position: absolute;
+            margin-left: -3rem;
+            margin-top: -3rem;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+
+        .comment-text{
+            width: 35ch;
+        }
+
+        .partners{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .sub{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .email-sub{
+            width: 50%;
+            max-width: 100%;
+            position: relative;
+        }
+        .sub-btn{
+            position: absolute; 
+            top: 0;
+            border-radius: 10px; 
+            right: 0;
+            border: none; 
+            top: 0; 
+            /* height: 30px; */
+            height: 80%;
+            top: 10%;
+            transform: translate(-5%);
+            color: white; 
+            background-color: #b12f79; 
+            padding-left: 0.7rem;
+            padding-right: 0.7rem;
+        }
+
+       
+
+        .title{
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .detail{
+            font-size: 0.8rem;
+        }
+        .all-sec{
+            margin-top: 25%;
+        }
+        .title-home{
+            font-size: 3.5rem;
+            font-weight: 400;
+            /* line-height: 3.7rem; */
+        }
+
+        .sub-title-home{
+            margin-top: -10px;
+            font-size: 2.1rem;
+            font-weight: 300;
+        }
+
+        .home-btn{
+            margin-top: 1.4rem;
+            border-radius: 50px;
+            border: 3px solid #b12f79;
+            background-color: #b12f79;
+            padding: 0.6rem 5rem 0.6rem 5rem;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover{
+            background-color: #fff;
+            color: #b12f79;
+        }
+       
+        .text-bot{
+            
+            margin-left: 20rem;
+            margin-bottom: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Photo-->
+    <div class="all">
+        <div class="header">
+            <div class="navi">
+                <a  class="Active"  href="#home">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a> 
+                <a href="#partners">Partners</a> 
+                <a href="#stories">Sotries</a> 
+            </div>
+           
+            <div class="img">
+                <div class="img-2">
+                    <div class="img-3">
+                        <div class="img-last">
+
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            
+        </div>
+        <img class="logo" src="./image/logo.png">
+        <div class="text-bot">
+            <div class="text">
+                <h1 class="title-home">Get anything</h1>
+                <h3 class="sub-title-home">done in an instant</h2>
+              </div>
+              <div class="button-container">
+                <button class="home-btn">BOOK NOW</button>
+              </div>
+            </div>
+        </div>
+       
+        <div class="container">
+    
+        
+            <div class="zdown">
+                <img src="./image/3.jpg" style="height:50em;width: 15;" >
+                <div class="p-1">
+                    <h1  >Why choose layzee</h1><br>
+                    <p  >
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+    
+                        Loresim Loresim Loresim Loresim Loresim LoresimLoresim Loresim Loresim Loresim LoresimLoresim Loresim
+    
+                    </p>
+                </div>
+               
+            </div>
+            <div class="zup">
+                <img src="./image/5.png" >
+                <img src="./image/6.png" >
+                <img src=".//image/5.png" >
+            </div>
+        </div>
+        <div class="all-sec">
+            <section class="offer section">
+                <h2 class="title">What we offer</h2>
+                <div class="offer__container">
+                  <span class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus similique, inventore <br> possimus, mollitia praesentium aliquid!</span>
+                  <div class="card__container">
+                    <div class="card">
+                      <div class="icon">
+                        <i class="ri-bank-card-fill ri-2x"></i>
+                      </div>
+                      <h3 class="offer__card__title">Card</h3>
+                      <span class="offer__card__text">Lorem ipsum dolor sit, amet</span>
+                    </div>
+                    <div class="card">
+                      <div class="icon">
+                        <i class="ri-magic-fill ri-2x"></i>
+                      </div>
+                      <h3 class="offer__card__title">Card</h3>
+                      <span class="offer__card__text">Lorem ipsum dolor sit, amet</span>
+                    </div>
+                    <div class="card">
+                      <div class="icon">
+                        <i class="ri-group-fill ri-2x"></i>
+                      </div>
+                      <h3 class="offer__card__title">Card</h3>
+                      <span class="offer__card__text">Lorem ipsum dolor sit, amet</span>
+                    </div>
+                 
+                    <div class="card">
+                      <div class="icon">
+                        <i class="ri-star-smile-fill ri-2x"></i>
+                      </div>
+                      <h3 class="offer__card__title">Card</h3>
+                      <span class="offer__card__text">Lorem ipsum dolor sit, amet</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          
+           
+          
+              <section class="section" id="partners">
+                <div class="partners">
+                  <h3 class="title">Experince the convinience</h3>
+                  <span class="detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, enim.</span>
+                </div>
+                <div class="comments">
+                  <div class="comment-container">
+                    <div class="comment-card">
+                      <div class="profile-pic"></div>
+                      <div class="comment-top">
+                        <div class="name">SampleName</div>
+                        <div class="stars">
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                        </div>
+                      </div>
+                      <div class="comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error deserunt consectetur, molestias, facilis dolor harum dolorum consequuntur maxime.</div>
+                    </div>
+          
+                    <div class="comment-card">
+                      <div class="profile-pic"></div>
+                      <div class="comment-top">
+                        <div class="name">SampleName</div>
+                        <div class="stars">
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                          <i class="ri-star-fill" style="color: gold;"></i>
+                        </div>
+                      </div>
+                      <div class="comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error deserunt consectetur, molestias, facilis dolor harum dolorum consequuntur maxime.</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          
+             
+    </div>
+    
+    
+</body>
+</html>
